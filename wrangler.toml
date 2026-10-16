@@ -2,7 +2,7 @@ name = "hdds2402-lab-01"
 main = "index.js"
 compatibility_date = "2026-10-16"
 
-# Binds the bucket to your worker code
-[[r2_buckets]]
-binding = "ASSETS_BUCKET"
-bucket_name = "your-r2-bucket-name" # Change this to your actual R2 bucket name
+# This automatically uploads and hosts everything inside the "public" folder
+[assets]
+directory = "./public"
+binding = "ASSETS"
